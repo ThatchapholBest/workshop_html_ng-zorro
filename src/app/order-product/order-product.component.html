@@ -1,0 +1,44 @@
+<nz-card class="card-order">
+  <nz-divider nzOrientation="left" nzText="แบบฟอร์มสั่งซื้อสินค้า" class="header-order"></nz-divider>
+  <form nz-form [formGroup]="orderForm" (ngSubmit)="submitForm()" class="form-order">
+    <nz-form-item>
+      <nz-form-label [nzSpan]="7" nzRequired nzFor="customerName">Name</nz-form-label>
+      <nz-form-control [nzSpan]="17" nzErrorTip="The input is not valid Name!">
+        <input nz-input formControlName="customerName" id="customerName" />
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-label [nzSpan]="7" nzFor="email" nzRequired>Email</nz-form-label>
+      <nz-form-control [nzSpan]="17" nzErrorTip="Please input your email!">
+        <input nz-input type="email" id="email" formControlName="email"/>
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-label [nzSpan]="7" nzFor="selectedProduct" nzRequired>Product</nz-form-label>
+      <nz-form-control [nzSpan]="17" nzErrorTip="The input is not valid Product!">
+        <nz-select formControlName="selectedProduct" nzPlaceHolder="กรุณาเลือก">
+          <nz-option *ngFor="let product of products" [nzValue]="product.value" [nzLabel]="product.label"></nz-option>
+        </nz-select>
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-label [nzSpan]="7" nzFor="quantity" nzRequired>Quantity</nz-form-label>
+      <nz-form-control [nzSpan]="17" nzErrorTip="Please input your quantity!">
+        <input nz-input type="number" id="quantity" formControlName="quantity"/>
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item nz-row class="register-area">
+      <nz-form-control [nzSpan]="14" [nzOffset]="7">
+        <button nz-button nzType="primary" >Register</button>
+        <nz-modal [(nzVisible)]="isVisible" nzTitle="ยืนยันการสั่งซื้อ" (nzOnCancel)="handleCancel()" (nzOnOk)="handleOk()">
+          <ng-container *nzModalContent>
+            <p>Name: {{ formData?.customerName }}</p>
+            <p>Email: {{ formData?.email }}</p>
+            <p>Product: {{ formData?.selectedProduct }}</p>
+            <p>Quantity: {{ formData?.quantity }}</p>
+          </ng-container>
+        </nz-modal>
+      </nz-form-control>
+    </nz-form-item>
+  </form>
+</nz-card>

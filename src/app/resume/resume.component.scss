@@ -1,0 +1,63 @@
+.card-resume {
+  width: 600px;
+  height: 100vh;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}
+
+.top {
+  background-color: #265073;
+  height: 150px;
+  width: 100%;
+  margin-bottom: 2px;
+}
+
+.img-profile {
+  max-width: 130px;
+  position: relative;
+  top: 15px;
+  left: 40px;
+}
+
+.name-b {
+  position: relative;
+  top: 20px;
+  right: 40px;
+} 
+
+.name {
+  color: white;
+}
+
+h2 {
+  color: white;
+  font-weight: bold;
+}
+
+p {
+  font-weight: lighter;
+}
+
+.left {
+  margin-top: 40px;
+  margin-right: 20px;
+  background-color: #265073;
+  padding: 10px;
+  color: white;
+  // padding-left: 10px;
+  margin-bottom: 20px;
+}
+
+.left-border {
+  border: solid 3px;
+  padding: 10px;
+}
+
+#border-b {
+  border-bottom: 2px solid #333;
+  padding-bottom: 2px;
+  margin-bottom: 6px;
+}
+
+#space {
+  padding-right: 5px;
+}

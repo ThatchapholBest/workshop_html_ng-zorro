@@ -1,0 +1,33 @@
+.calculator-card {
+  // padding: 0%;
+  background-color: black;
+  width: 500px;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}
+
+.input-cal {
+  width: 100%;
+}
+
+#div-set {
+  display: flex;
+  justify-content: center;
+}
+
+#button-w {
+  height: 8vh;
+  margin: 3px;
+  width: 95%;
+}
+
+.hover-button:hover {
+  background-color: #1890ff;
+  color: #fff;
+  border-color: #1890ff;
+}
+
+.hover-button-red:hover {
+  background-color: red;
+  color: #fff;
+  border-color: red;
+}
